@@ -1,0 +1,46 @@
+[build-system]
+requires = [
+  "setuptools >= 40.9.0",
+  "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "test_mda_pip_rtd"
+description = "A short description of the project."
+license = {file = "LICENSE" }
+authors = [
+    {name = "cookie monster", email = "cookiemonster@trash.can"},
+]
+maintainers = [
+    {name = "cookie monster", email = "cookiemonster@trash.can"},
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "MDAnalysis>=2.0.0",
+]
+dynamic = [
+    "version",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6.0",
+    "pytest-xdist>=2.5",
+    "pytest-cov>=3.0",
+]
+doc = [
+    "sphinx>=1.8",
+    "sphinx_rtd_theme>=1.0",
+]
+
+# [project.urls]
+# source = "https://github.com/lilyminium/test_mda_pip_rtd"
+# documentation = "https://test_mda_pip_rtd.readthedocs.io"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = [
+    "test_mda_pip_rtd/tests",
+]

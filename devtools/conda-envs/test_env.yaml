@@ -1,0 +1,21 @@
+name: test_mda_pip_rtd-test
+channels: 
+  - defaults
+dependencies:
+    # Base depends
+  - python
+  - pip
+
+    # MDAnalysis
+  
+
+    # Testing
+  - pytest
+  - pytest-cov
+  - pytest-xdist
+  - codecov
+
+    # Pip-only installs
+  #- pip:
+  #  - codecov
+
